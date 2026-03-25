@@ -4,17 +4,19 @@
 
 body {
     display: grid;
-    grid-template: 1fr 1fr 10fr / 1fr 3fr;
+    grid-template: 1fr 1fr 15fr / 1fr 4fr;
+    max-height: 100vh;
 }
 
 .menu {
     grid-row: 1/-1;
     grid-column: 1;
-    display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    background-color: rgb(54, 126, 251);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(75, 140, 252);
+    justify-content: start;
+    gap: 40px;
     padding: 20px;
-    align-items: stretch;
 }
 
 .img-big svg {
@@ -23,8 +25,8 @@ body {
 }
 
 svg {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .dashboard {
@@ -36,12 +38,13 @@ svg {
 .sections {
     display:flex;
     flex-direction: column;
+    gap: 8px;
 }
 
 .section {
     display:flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-weight: bold;
 }
 
@@ -54,11 +57,91 @@ svg {
 .search {
     grid-row: 1;
     grid-column: 2/-1;
+    display: flex;
+    gap: 10%;
+    background-color: white;
+}
+
+.search-bar {
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.search-bar input {
+    width: 600px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgb(203, 218, 236);
+    border: none;
+}
+
+.info-bar {
+    display:flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.info-bar img {
+    width: 30px;
+    height: 30px;
+}
+
+.search button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .profile {
     grid-row: 2;
     grid-column: 2/-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    border-bottom: 4px solid rgb(148, 159, 173);
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap:15px;
+    font-weight: bold;
+}
+
+.right-para {
+    font-size: small;
+}
+
+.profile-name {
+    font-size: 30px;
+}
+
+.profile-info img {
+    width: 60px;
+    height: 60px;
+}
+
+.profile-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap:15px;
+    align-items: center;
+}
+
+.profile-buttons button {
+    color: white;
+    background-color: rgb(54, 126, 251);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
 }
 
 .content {
@@ -66,6 +149,7 @@ svg {
     grid-column: 2;
     display: grid;
     grid-template-columns: 2fr 1fr;
+    background-color: rgb(203, 218, 236);
 }
 
 .projects {
